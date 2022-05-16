@@ -6,15 +6,34 @@ import { v4 as uuidv4 } from "uuid";
 const THE_LOCAL_STORAGE_KEY = "soundBoardApp.sounds";
 
 function App() {
-  const [theSounds, setSounds] = useState([]);
+  function importAll(aRequire) {
+    let sounds = {};
+    aRequire.keys().map((item, index) => {
+      return (sounds[item.replace("./", "")] = aRequire(item));
+    });
+    return sounds;
+  }
+
+  const sounds = importAll(require.context("./sounds", false, /\.(mp3|wav)$/));
+
+  console.log(Object.keys(sounds));
+  const initialSounds = Object.keys(sounds).map(function (object) {
+    return {
+      id: uuidv4(),
+      name: object,
+      path: object,
+      soundFile: sounds[object],
+    };
+  });
+
+  const [theSounds, setSounds] = useState(initialSounds);
 
   useEffect(() => {
     const theStoredSounds = JSON.parse(
       localStorage.getItem(THE_LOCAL_STORAGE_KEY)
     );
-    if (theStoredSounds.length > 0) {
+    if (theStoredSounds != null && theStoredSounds.length > 0) {
       setSounds(theStoredSounds);
-      console.log(theStoredSounds);
     }
   }, []);
 
@@ -30,6 +49,7 @@ function App() {
           id: uuidv4(),
           name: theInputSoundNameString,
           path: theInputSoundPathString,
+          soundFile: sounds[theInputSoundPathString],
         },
       ];
     });

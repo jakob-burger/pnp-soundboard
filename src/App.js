@@ -3,6 +3,7 @@ import SoundBoard from "./SoundBoard";
 import SoundUploadForm from "./SoundUploadForm";
 import Sound from "./Sound";
 import { v4 as uuidv4 } from "uuid";
+import SoundsJsonData from "./data/sounds.json";
 
 const THE_LOCAL_STORAGE_KEY = "soundBoardApp.sounds";
 
@@ -15,10 +16,17 @@ function App() {
     return sounds;
   }
 
-  const sounds = importAll(require.context("./sounds", false, /\.(mp3|wav)$/));
+  const sounds = importAll(
+    require.context("./data/sounds", false, /\.(mp3|wav)$/)
+  );
 
-  const initialSounds = Object.keys(sounds).map(function (object) {
-    return new Sound(uuidv4(), object, object, sounds[object]);
+  const initialSounds = SoundsJsonData.map((object, index) => {
+    return new Sound(
+      uuidv4(),
+      object.name,
+      object.fileName,
+      sounds[object.fileName]
+    );
   });
 
   const [theSounds, setSounds] = useState(initialSounds);

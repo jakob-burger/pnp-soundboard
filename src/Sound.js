@@ -1,13 +1,10 @@
-import React from "react";
-import useSound from "use-sound";
-
-export default function Sound({ aSound }) {
-  const [play] = useSound(aSound.soundFile);
-
-  return (
-    <label>
-      <button onClick={play}>Play</button>
-      {aSound.name}
-    </label>
-  );
+class Sound {
+  constructor(id, name, path, soundFile) {
+    this.id = id;
+    this.name = name;
+    this.path = path;
+    this.soundFile = soundFile;
+  }
 }
+
+export default Sound;

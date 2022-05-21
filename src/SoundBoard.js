@@ -1,8 +1,14 @@
 import React from "react";
-import Sound from "./Sound";
+import SoundPlayer from "./SoundPlayer";
 
 export default function SoundBoard({ theSounds }) {
   return theSounds.map((eachSound) => {
-    return <Sound key={eachSound.id} aSound={eachSound}></Sound>;
+    return (
+      <>
+        <SoundPlayer key={eachSound.id} aSound={eachSound}></SoundPlayer>
+        <br></br>
+        <br></br>
+      </>
+    );
   });
 }

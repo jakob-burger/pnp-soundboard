@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SoundBoard from "./SoundBoard";
 import SoundUploadForm from "./SoundUploadForm";
+import Sound from "./Sound";
 import { v4 as uuidv4 } from "uuid";
 
 const THE_LOCAL_STORAGE_KEY = "soundBoardApp.sounds";
@@ -16,14 +17,8 @@ function App() {
 
   const sounds = importAll(require.context("./sounds", false, /\.(mp3|wav)$/));
 
-  console.log(Object.keys(sounds));
   const initialSounds = Object.keys(sounds).map(function (object) {
-    return {
-      id: uuidv4(),
-      name: object,
-      path: object,
-      soundFile: sounds[object],
-    };
+    return new Sound(uuidv4(), object, object, sounds[object]);
   });
 
   const [theSounds, setSounds] = useState(initialSounds);
@@ -45,12 +40,12 @@ function App() {
     setSounds((aPreviousSoundsCollection) => {
       return [
         ...aPreviousSoundsCollection,
-        {
-          id: uuidv4(),
-          name: theInputSoundNameString,
-          path: theInputSoundPathString,
-          soundFile: sounds[theInputSoundPathString],
-        },
+        new Sound(
+          uuidv4(),
+          theInputSoundNameString,
+          theInputSoundPathString,
+          sounds[theInputSoundPathString]
+        ),
       ];
     });
   }

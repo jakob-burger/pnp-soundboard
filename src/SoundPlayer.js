@@ -53,8 +53,8 @@ export default function SoundPlayer({ aSound }) {
     <Card>
       <Card.Body>
         <Row>
-          <Col md="auto">
-            <i className="bi bi-water"></i>
+          <Col xs="1">
+            <i className={"bi " + aSound.iconClass}></i>
           </Col>
           <Col>
             <Card.Title>{aSound.name}</Card.Title>

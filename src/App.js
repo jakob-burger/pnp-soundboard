@@ -25,7 +25,8 @@ function App() {
       uuidv4(),
       object.name,
       object.fileName,
-      sounds[object.fileName]
+      sounds[object.fileName],
+      object.iconClass
     );
   });
 
@@ -52,7 +53,8 @@ function App() {
           uuidv4(),
           theInputSoundNameString,
           theInputSoundPathString,
-          sounds[theInputSoundPathString]
+          sounds[theInputSoundPathString],
+          ""
         ),
       ];
     });

@@ -61,7 +61,6 @@ function App() {
   return (
     <>
       <SoundBoard theSounds={theSounds} />
-      <SoundUploadForm addSound={addSound} />
     </>
   );
 }

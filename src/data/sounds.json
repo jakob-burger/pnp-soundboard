@@ -8,6 +8,30 @@
     "fileName": "Zap.wav"
   },
   {
+    "name": "Verzaubernde Atmosphäre",
+    "fileName": "Atmosphäre.mp3"
+  },
+  {
+    "name": "Raubvogel Schrei",
+    "fileName": "Raubvogel.mp3"
+  },
+  {
+    "name": "Bestie Schrei",
+    "fileName": "Roar.mp3"
+  },
+  {
+    "name": "Sturm",
+    "fileName": "Sturm.mp3"
+  },
+  {
+    "name": "Wind",
+    "fileName": "Wind.mp3"
+  },
+  {
+    "name": "Zombies",
+    "fileName": "Zombies.mp3"
+  },
+  {
     "name": "Zwitschern",
     "fileName": "Zwitschern.mp3"
   }

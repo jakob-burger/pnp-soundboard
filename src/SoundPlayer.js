@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import useSound from "use-sound";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Col, Row, Card, Button } from "react-bootstrap";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 export default function SoundPlayer({ aSound }) {
   const [play, exposedData] = useSound(aSound.soundFile, {
@@ -47,16 +50,25 @@ export default function SoundPlayer({ aSound }) {
   }
 
   return (
-    <>
-      <button onClick={handlePlayClicked}>
-        {isPlaying ? "Pause" : "Play"}
-      </button>
-      <button onClick={handleStopClicked}>Reset</button>
-      <label>{aSound.name}</label>
-      <br></br>
-      <label>
-        Länge: {seconds}:{theLengthInSeconds}
-      </label>
-    </>
+    <Card>
+      <Card.Body>
+        <Row>
+          <Col md="auto">
+            <i className="bi bi-water"></i>
+          </Col>
+          <Col>
+            <Card.Title>{aSound.name}</Card.Title>
+          </Col>
+        </Row>
+        <Card.Text>
+          Länge: {seconds}:{theLengthInSeconds}
+        </Card.Text>
+        <Button onClick={handlePlayClicked}>
+          {isPlaying ? "Pause" : "Play"}
+        </Button>
+        <Button onClick={handleStopClicked}>Reset</Button>
+        <br></br>
+      </Card.Body>
+    </Card>
   );
 }

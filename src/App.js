@@ -5,6 +5,7 @@ import Sound from "./Sound";
 import { v4 as uuidv4 } from "uuid";
 import SoundsJsonData from "./data/sounds.json";
 import { library } from "@fortawesome/fontawesome-svg-core";
+import { Helmet } from "react-helmet";
 import {
   faDragon,
   faBoltLightning,
@@ -88,6 +89,11 @@ function App() {
 
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>PnP SoundBoard</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <SoundBoard theSounds={theSounds} />
     </>
   );

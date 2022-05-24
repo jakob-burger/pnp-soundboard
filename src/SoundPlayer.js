@@ -2,6 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Row, Card } from "react-bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function SoundPlayer({ aSound }) {
   return (
@@ -9,7 +10,7 @@ export default function SoundPlayer({ aSound }) {
       <Card.Body>
         <Row>
           <Col xs="1">
-            <i className={"bi " + aSound.iconClass}></i>
+            <FontAwesomeIcon icon={aSound.iconClass}></FontAwesomeIcon>
           </Col>
           <Col>
             <Card.Title>{aSound.name}</Card.Title>

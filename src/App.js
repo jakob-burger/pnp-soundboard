@@ -4,6 +4,32 @@ import SoundUploadForm from "./SoundUploadForm";
 import Sound from "./Sound";
 import { v4 as uuidv4 } from "uuid";
 import SoundsJsonData from "./data/sounds.json";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faDragon,
+  faBoltLightning,
+  faWater,
+  faHandSparkles,
+  faCrow,
+  faPaw,
+  faCloudShowersHeavy,
+  faWind,
+  faSkull,
+  faFeather,
+} from "@fortawesome/free-solid-svg-icons";
+
+library.add(
+  faDragon,
+  faBoltLightning,
+  faWater,
+  faHandSparkles,
+  faCrow,
+  faPaw,
+  faCloudShowersHeavy,
+  faWind,
+  faSkull,
+  faFeather
+);
 
 const THE_LOCAL_STORAGE_KEY = "soundBoardApp.sounds";
 

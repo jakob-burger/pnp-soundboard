@@ -2,46 +2,46 @@
   {
     "name": "Bach",
     "fileName": "Bach.mp3",
-    "iconClass": "bi-water"
+    "iconClass": "water"
   },
   {
     "name": "Zap",
     "fileName": "Zap.wav",
-    "iconClass": "bi-lightning"
+    "iconClass": "bolt-lightning"
   },
   {
     "name": "Verzaubernde Atmosphäre",
     "fileName": "Atmosphäre.mp3",
-    "iconClass": "bi-tropical-storm"
+    "iconClass": "hand-sparkles"
   },
   {
     "name": "Raubvogel Schrei",
     "fileName": "Raubvogel.mp3",
-    "iconClass": "bi-broadcast"
+    "iconClass": "crow"
   },
   {
     "name": "Bestie Schrei",
     "fileName": "Roar.mp3",
-    "iconClass": "bi-broadcast"
+    "iconClass": "paw"
   },
   {
     "name": "Sturm",
     "fileName": "Sturm.mp3",
-    "iconClass": "bi-cloud-lightning-rain"
+    "iconClass": "cloud-showers-heavy"
   },
   {
     "name": "Wind",
     "fileName": "Wind.mp3",
-    "iconClass": "bi-wind"
+    "iconClass": "wind"
   },
   {
     "name": "Zombies",
     "fileName": "Zombies.mp3",
-    "iconClass": "bi-person"
+    "iconClass": "skull"
   },
   {
     "name": "Zwitschern",
     "fileName": "Zwitschern.mp3",
-    "iconClass": "bi-broadcast"
+    "iconClass": "feather"
   }
 ]

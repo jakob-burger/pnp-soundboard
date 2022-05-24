@@ -17,7 +17,11 @@ export default function SoundPlayer({ aSound }) {
         </Row>
         <Row>
           <Col>
-            <audio controls src={aSound.soundFile}></audio>
+            <audio
+              style={{ width: "100%" }}
+              controls
+              src={aSound.soundFile}
+            ></audio>
           </Col>
         </Row>
       </Card.Body>

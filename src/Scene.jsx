@@ -1,23 +1,29 @@
 import React, { useState, useEffect } from "react";
 import SoundBoard from "./SoundBoard";
 import { useParams } from "react-router-dom";
-import { getSounds, getScene, getSound } from "./data/Data";
+import { getScene, getSound } from "./data/Data";
+import FallbackPage from "./FallbackPage";
 
 const THE_LOCAL_STORAGE_KEY = "soundBoardApp.sounds";
 
 export default function Scene() {
   const params = useParams();
   const theScene = getScene(params.sceneId);
-  const initialSounds = theScene.sounds.map((eachSoundName) => {
-    return getSound(eachSoundName);
-  });
+  let initialSounds;
+  if (theScene !== undefined) {
+    initialSounds = theScene.sounds.map((eachSoundName) => {
+      return getSound(eachSoundName);
+    });
+  }
 
   const [theSounds, setSounds] = useState(initialSounds);
 
   useEffect(() => {
-    const theStoredSounds = JSON.parse(
-      localStorage.getItem(THE_LOCAL_STORAGE_KEY)
-    );
+    const theItem = localStorage.getItem(THE_LOCAL_STORAGE_KEY);
+    let theStoredSounds;
+    if (theItem !== undefined && theItem !== "undefined") {
+      theStoredSounds = JSON.parse(theItem);
+    }
     if (theStoredSounds != null && theStoredSounds.length > 0) {
       setSounds(theStoredSounds);
     }
@@ -41,5 +47,14 @@ export default function Scene() {
       ];
     });
   } */
-  return <SoundBoard theSounds={theSounds} />;
+  if (theScene === undefined) {
+    return <FallbackPage />;
+  } else {
+    return (
+      <>
+        <h1 style={{ textAlign: "center" }}>{theScene.name + " Soundboard"}</h1>
+        <SoundBoard theSounds={theSounds} />
+      </>
+    );
+  }
 }

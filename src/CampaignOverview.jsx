@@ -10,10 +10,14 @@ export default function CampaignOverview() {
 
   return (
     <>
+      <div style={{ textAlign: "center" }}>
+        <h1>PnP-Soundboard</h1>
+        <h3>Bitte wählen Sie eine Kampagne:</h3>
+      </div>
       <Row className="m-4 gy-4">
         {campaigns.map((eachCampaign) => {
           return (
-            <Col sm="12" md="12" xxl="6">
+            <Col sm="12" md="12" xxl="6" key={eachCampaign.id}>
               <Card
                 style={{ cursor: "pointer" }}
                 onClick={() => {

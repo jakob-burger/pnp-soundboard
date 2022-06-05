@@ -5,6 +5,7 @@ import Scene from "./Scene.jsx";
 import Campaign from "./Campaign.jsx";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import FallbackPage from "./FallbackPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,14 +15,7 @@ root.render(
         <Route path="/" element={<App />}></Route>
         <Route path=":campaignId" element={<Campaign />} />
         <Route path=":campaignId/:sceneId" element={<Scene />} />
-        <Route
-          path="*"
-          element={
-            <main>
-              <p>There's nothing here!</p>
-            </main>
-          }
-        />
+        <Route path="*" element={<FallbackPage />} />
       </Routes>
     </Router>
   </React.StrictMode>

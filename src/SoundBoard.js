@@ -9,8 +9,8 @@ export default function SoundBoard({ theSounds }) {
       <Row className="m-4 gy-4">
         {theSounds.map((eachSound) => {
           return (
-            <Col sm="12" md="6" xxl="3">
-              <SoundPlayer key={eachSound.id} aSound={eachSound}></SoundPlayer>
+            <Col sm="12" md="6" xxl="3" key={eachSound.id}>
+              <SoundPlayer aSound={eachSound}></SoundPlayer>
             </Col>
           );
         })}

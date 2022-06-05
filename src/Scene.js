@@ -1,7 +1,8 @@
 class Scene {
-  constructor(id, name, sounds) {
+  constructor(id, name, image, sounds) {
     this.id = id;
     this.name = name;
+    this.image = image;
     this.sounds = sounds;
   }
 }

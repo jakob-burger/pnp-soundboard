@@ -7,11 +7,11 @@ import Sound from "../Sound";
 import { v4 as uuidv4 } from "uuid";
 
 const scenes = ScenesJsonData.map((object, index) => {
-  return new Scene(object.id, object.name, object.sounds);
+  return new Scene(object.id, object.name, object.image, object.sounds);
 });
 
 const campaigns = CampaignsJsonData.map((object, index) => {
-  return new Campaign(object.id, object.name, object.scenes);
+  return new Campaign(object.id, object.name, object.image, object.scenes);
 });
 
 function importAll(aRequire) {
@@ -54,4 +54,8 @@ export function getScene(id) {
 
 export function getSounds() {
   return sounds;
+}
+
+export function getSound(name) {
+  return sounds.find((sound) => sound.name === name);
 }

@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
 import SoundBoard from "./SoundBoard";
-import { getSounds } from "./data/Data";
+import { useParams } from "react-router-dom";
+import { getSounds, getScene, getSound } from "./data/Data";
 
 const THE_LOCAL_STORAGE_KEY = "soundBoardApp.sounds";
 
 export default function Scene() {
-  const initialSounds = getSounds();
+  const params = useParams();
+  const theScene = getScene(params.sceneId);
+  const initialSounds = theScene.sounds.map((eachSoundName) => {
+    return getSound(eachSoundName);
+  });
 
   const [theSounds, setSounds] = useState(initialSounds);
 

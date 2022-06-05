@@ -2,11 +2,13 @@
   {
     "id": "wirtshaus",
     "name": "Wirtshaus",
+    "image": "taverne.jpg",
     "sounds": ["Sturm", "Bestie Schrei"]
   },
   {
     "id": "wald",
     "name": "Wald",
+    "image": "wald.jpg",
     "sounds": [
       "Bestie Schrei",
       "Raubvogel Schrei",
@@ -18,11 +20,13 @@
   {
     "id": "dorf",
     "name": "Dorf",
+    "image": "dorf.jpg",
     "sounds": ["Zwitschern", "Zombies"]
   },
   {
     "id": "labyrinth",
     "name": "Labyrinth",
+    "image": "labyrinth.jpg",
     "sounds": ["Zap", "Verzaubernde Atmosphäre"]
   }
 ]

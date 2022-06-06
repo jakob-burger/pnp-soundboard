@@ -15,7 +15,7 @@ import {
   faSkull,
   faFeather,
 } from "@fortawesome/free-solid-svg-icons";
-import CampaignOverview from "./CampaignOverview";
+import CampaignOverview from "./components/CampaignOverview";
 
 library.add(
   faDragon,

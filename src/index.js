@@ -1,11 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import Scene from "./Scene.jsx";
-import Campaign from "./Campaign.jsx";
-
+import Scene from "./components/Scene.jsx";
+import Campaign from "./components/Campaign.jsx";
+import FallbackPage from "./components/FallbackPage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import FallbackPage from "./FallbackPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

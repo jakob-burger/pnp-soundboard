@@ -1,47 +1,52 @@
 [
   {
     "name": "Bach",
-    "fileName": "Bach.mp3",
+    "link": "https://cdn.freesound.org/previews/433/433589_5618682-hq.mp3",
     "iconClass": "water"
   },
   {
     "name": "Zap",
-    "fileName": "Zap.wav",
+    "link": "https://cdn.freesound.org/previews/216/216089_3450800-hq.mp3",
     "iconClass": "bolt-lightning"
   },
   {
     "name": "Verzaubernde Atmosphäre",
-    "fileName": "Atmosphäre.mp3",
+    "link": "https://cdn.freesound.org/previews/513/513288_10403568-hq.mp3",
     "iconClass": "hand-sparkles"
   },
   {
     "name": "Raubvogel Schrei",
-    "fileName": "Raubvogel.mp3",
+    "link": "https://cdn.freesound.org/previews/571/571273_12170645-hq.mp3",
     "iconClass": "crow"
   },
   {
     "name": "Bestie Schrei",
-    "fileName": "Roar.mp3",
+    "link": "https://cdn.freesound.org/previews/173/173569_1785726-hq.mp3",
     "iconClass": "paw"
   },
   {
     "name": "Sturm",
-    "fileName": "Sturm.mp3",
+    "link": "https://cdn.freesound.org/previews/332/332116_2291385-hq.mp3",
+    "iconClass": "cloud-showers-heavy"
+  },
+  {
+    "name": "Düsterer Wind",
+    "link": "https://cdn.freesound.org/previews/397/397947_1149179-hq.mp3",
     "iconClass": "cloud-showers-heavy"
   },
   {
     "name": "Wind",
-    "fileName": "Wind.mp3",
+    "link": "https://cdn.freesound.org/previews/104/104952_161750-hq.mp3",
     "iconClass": "wind"
   },
   {
     "name": "Zombies",
-    "fileName": "Zombies.mp3",
+    "link": "https://cdn.freesound.org/previews/125/125405_2279655-hq.mp3",
     "iconClass": "skull"
   },
   {
     "name": "Zwitschern",
-    "fileName": "Zwitschern.mp3",
+    "link": "https://cdn.freesound.org/previews/345/345851_387219-hq.mp3",
     "iconClass": "feather"
   }
 ]
